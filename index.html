@@ -39,9 +39,9 @@
 				</div>
 						<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="https://alexandrenf.github.io/#section1">Conteúdos</a></li>
-						<li class=""><a href="https://alexandrenf.github.io/#section2">Competências e Habilidades</a></li>
-						<li class=""><a href="https://alexandrenf.github.io/#section3">Treino para Distratores</a></li>
+						<li class="b active"><a href="https://alexandrenf.github.io/#section1">Conteúdos</a></li>
+						<li class="b"><a href="https://alexandrenf.github.io/#section2">Competências e Habilidades</a></li>
+						<li class="b"><a href="https://alexandrenf.github.io/#section3">Treino para Distratores</a></li>
 						<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Análise por ano<span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -83,6 +83,24 @@
 	</div>
 		<script src="./ENEM_files/jquery.min.js"></script>
 		<script src="./ENEM_files/bootstrap.min.js"></script>
+		<script>
+
+				// Get the container element
+		var btnContainer = document.getElementById("myNavbar");
+
+		// Get all buttons with class="btn" inside the container
+		var btns = btnContainer.getElementsByClassName("b");
+
+		// Loop through the buttons and add the active class to the current/clicked button
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		    var current = document.getElementsByClassName("active");
+		    current[0].className = current[0].className.replace(" active", "");
+		    this.className += " active";
+		  });
+		}
+
+		</script>
 
 <!--@vped.2000 [Turtle:emoji]-->
 <div style="background-color:transparent;">
